@@ -26,7 +26,7 @@ model = tf.keras.models.Sequential([
       units=256,
       input_shape=(1, 128)),   # nie musze podawac, bo sobie z danych uczacych wyciagnie
     tf.keras.layers.Dense(256),
-    tf.keras.layers.Dense(128) # output
+    tf.keras.layers.Dense(units=128, activation='sigmoid') # output
 ])
 
 # mean absolute error could also be used
